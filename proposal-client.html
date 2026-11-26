@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GOLF CLUB 360 · 合作价值图解</title>
+<meta name="robots" content="noindex">
+<style>
+/* 客户版图解：象牙纸底 × 森林绿 × 香槟金。字体取自系统，离线可用，可直接打印成 PDF。 */
+:root{
+ --paper:#F6F2E8;--card:#FCFAF4;--ink:#141A16;--ink2:#4E5650;--ink3:#7C837D;--line:#14201A26;--line2:#14201A14;
+ --forest:#173D30;--forest2:#1F5242;--brass:#A06A12;--brass2:#C8A96B;
+ --c1:#4A6FB8;--c2:#13845C;--c3:#A06A12;
+ --sans:"PingFang SC","Microsoft YaHei UI","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+ --serif:"Bodoni Moda","Bodoni 72","Bodoni MT","Didot",Georgia,var(--sans);
+ --num:"Bahnschrift","DIN Alternate","DIN 2014","Segoe UI",var(--sans)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15.5px/1.75 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p{margin:0}
+.page{max-width:1080px;margin:0 auto;padding:0 36px}
+/* 封面 */
+.cover{position:relative;overflow:hidden;background:var(--forest);color:#F3EFE4;padding:64px 0 54px}
+.cover::after{content:"";position:absolute;right:-120px;top:-80px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,#F3EFE414 1.2px,transparent 1.8px) 0 0/12px 12px,radial-gradient(circle,#F3EFE414 1.2px,transparent 1.8px) 6px 6px/12px 12px;mask:radial-gradient(circle,#000 30%,transparent 70%);-webkit-mask:radial-gradient(circle,#000 30%,transparent 70%)}
+.cover .page{position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:10px;font:400 15px/1 var(--serif);letter-spacing:.24em}
+.brand em{font:italic 400 18px var(--serif);color:var(--brass2);letter-spacing:.02em}
+.ball{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 36% 32%,#fff,#ECE6D6 55%,#B9B09A);box-shadow:0 0 0 1.5px #C8A96B88}
+.kicker{font:italic 400 24px/1.2 var(--serif);color:var(--brass2);margin:34px 0 8px}
+.cover h1{font-size:44px;line-height:1.25;font-weight:700;letter-spacing:.02em;max-width:820px}
+.cover p.sub{color:#D7DDD4;font-size:17px;max-width:700px;margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border-top:1px solid #F3EFE433}
+.stats div{padding:18px 22px 4px 0}
+.stats div+div{padding-left:22px;border-left:1px solid #F3EFE433}
+.stats b{display:block;font:400 44px/1 var(--serif);color:#F3EFE4}
+.stats b small{font:500 15px var(--sans);color:#D7DDD4;margin-left:4px}
+.stats span{display:block;font-size:14px;color:#C9D1C7;margin-top:8px}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:12px 22px;border-radius:999px;background:#F3EFE4;color:var(--forest);font-weight:700;text-decoration:none;transition:background .2s}
+.cta:hover{background:#fff}
+.cta span{font:italic 400 18px var(--serif);color:var(--brass)}
+.note a{color:var(--forest);font-weight:700}
+/* 章节 */
+section{padding:56px 0 8px}
+.eyebrow{display:flex;align-items:center;gap:10px;font:600 11px/1.4 var(--num);letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin-bottom:8px}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor}
+h2{font-size:30px;line-height:1.3;font-weight:700}
+h2 .no{font:italic 400 32px var(--serif);color:var(--brass);margin-right:12px}
+.lead{color:var(--ink2);font-size:17px;max-width:780px;margin:10px 0 24px}
+.note{font-size:12.5px;color:var(--ink3);margin-top:10px}
+.card{background:var(--card);border:1px solid var(--line2);border-radius:14px;padding:20px 22px;box-shadow:0 1px 0 #fff inset,0 16px 30px -26px #14201A66}
+/* 现在 vs 合作后 */
+.vs{display:grid;grid-template-columns:120px 1fr 40px 1fr;align-items:stretch;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.vs > div{padding:16px 18px;border-bottom:1px solid var(--line2)}
+.vs .h{font:600 11px/1.4 var(--num);letter-spacing:.18em;color:var(--ink3);background:#EFE9DA;border-bottom:1px solid var(--line)}
+.vs .h.after{color:var(--forest)}
+.vs .k{font-weight:700;display:flex;align-items:center;gap:8px}
+.vs .k i{font:italic 400 18px var(--serif);color:var(--brass)}
+.vs .b{color:var(--ink3)}
+.vs .a{background:#EEF4EF;color:var(--ink);font-weight:500}
+.vs .arrow{display:grid;place-items:center;color:var(--forest);font-size:18px;padding:0}
+.vs > div:nth-last-child(-n+4){border-bottom:0}
+/* 平台结构 */
+.arch{display:grid;gap:10px}
+.roof{text-align:center;padding:14px;border-radius:14px;background:var(--forest);color:#F3EFE4;font-weight:700;letter-spacing:.04em}
+.roof small{display:block;font-weight:400;color:#C9D1C7;font-size:13px}
+.engines{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.engine{background:var(--card);border:1px solid var(--line2);border-top:3px solid var(--brass2);border-radius:12px;padding:16px}
+.engine b{display:block;font:italic 400 22px var(--serif);color:var(--forest)}
+.engine h4{font-size:16px;margin:2px 0 6px}
+.engine p{font-size:14px;color:var(--ink2)}
+.base{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;padding:14px;border-radius:14px;border:1.5px dashed #1F524288;color:var(--forest);font-weight:600;font-size:14.5px}
+.base b{width:100%;text-align:center;font:600 11px/1.4 var(--num);letter-spacing:.2em;color:var(--brass)}
+/* 飞轮 */
+.wheel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center}
+.wheel svg text{font-family:var(--sans)}
+.wheel ol{margin:0;padding:0;list-style:none;counter-reset:w}
+.wheel li{display:grid;grid-template-columns:36px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line2)}
+.wheel li::before{counter-increment:w;content:counter(w,decimal-leading-zero);font:italic 400 20px/1.3 var(--serif);color:var(--brass)}
+.wheel li b{display:block}
+.wheel li span{color:var(--ink2);font-size:14px}
+/* 收益 */
+.scen{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.scen .card{position:relative;padding:18px 20px}
+.scen .card::before{content:"";position:absolute;left:20px;right:20px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c)}
+.scen .card.main{border-color:#13845C66;background:#F1F6F1}
+.scen h4{display:flex;justify-content:space-between;align-items:baseline;font-size:15px}
+.scen h4 span{font:600 11px var(--num);letter-spacing:.12em;color:var(--ink3)}
+.scen .big{font:400 40px/1.1 var(--serif);margin:10px 0 6px}
+.scen dl{display:grid;grid-template-columns:1fr auto;gap:4px 10px;margin:0;font-size:13.5px}
+.scen dt{color:var(--ink3)}.scen dd{margin:0;font:600 14px var(--num)}
+figure{margin:0;background:var(--card);border:1px solid var(--line2);border-radius:16px;padding:20px 22px 14px}
+figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+figcaption b{font-size:16px}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--ink2)}
+.legend i{display:inline-block;width:18px;height:0;border-top:2px solid var(--c);vertical-align:middle;margin-right:6px}
+.legend i.d{border-top-style:dashed}
+svg .axis{font:11px var(--num);fill:var(--ink3)}
+svg .dl{font:600 13px var(--sans);fill:var(--ink)}
+svg .dl2{font:12px var(--sans);fill:var(--ink2)}
+.callout{display:flex;gap:18px;align-items:center;margin-top:14px;padding:16px 20px;border-radius:14px;background:var(--forest);color:#F3EFE4}
+.callout b{font:400 38px/1 var(--serif);color:var(--brass2);white-space:nowrap}
+.callout p{color:#D7DDD4}
+details.data{margin-top:10px;font-size:13.5px}
+details.data summary{cursor:pointer;color:var(--ink2)}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px}
+th{font:600 11px/1.4 var(--num);letter-spacing:.12em;color:var(--ink3);text-align:left;padding:8px 10px;border-bottom:1.5px solid var(--ink)}
+td{padding:9px 10px;border-bottom:1px solid var(--line2)}
+td.n{font:600 14px var(--num)}
+/* 收入层 */
+.stairs{display:grid;grid-template-columns:repeat(3,1fr);align-items:end;gap:0}
+.stair{border:1px solid var(--line);border-radius:14px 14px 0 0;padding:18px 18px 16px;margin-right:-1px;background:var(--card)}
+.stair:nth-child(1){min-height:200px}.stair:nth-child(2){min-height:250px;background:#EEF4EF}.stair:nth-child(3){min-height:300px;background:#E1ECE4}
+.stair b{font:600 11px/1.4 var(--num);letter-spacing:.2em;color:var(--brass)}
+.stair h4{font-size:18px;margin:4px 0 10px}
+.stair ul{margin:0;padding-left:18px;color:var(--ink2);font-size:14.5px}
+.ground{border-top:3px solid var(--forest);padding-top:8px;font-size:13px;color:var(--ink3);display:flex;justify-content:space-between}
+/* 资产归属 */
+.own{display:grid;grid-template-columns:1.25fr .1fr 1fr;align-items:stretch}
+.own .yours{background:var(--forest);color:#F3EFE4;border-radius:16px;padding:22px 24px}
+.own .yours h4{font-size:18px;margin-bottom:12px}
+.own .yours li{color:#E3E8E0}
+.own ul{margin:0;padding-left:18px;line-height:2}
+.own .link{display:grid;place-items:center;color:var(--brass);font:italic 400 30px var(--serif)}
+.own .ours{border:1px solid var(--line);border-radius:16px;padding:22px 24px;background:var(--card)}
+.own .ours h4{font-size:18px;margin-bottom:12px}
+.flowline{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:14px;color:var(--ink2);flex-wrap:wrap}
+.flowline span{padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.flowline em{font-style:normal;color:var(--forest);font-weight:700}
+/* 合作方式 */
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mode{position:relative;padding:22px;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+.mode .l{font:italic 400 40px/1 var(--serif);color:var(--forest)}
+.mode h4{font-size:18px;margin:8px 0 10px}
+.mode dl{margin:0;font-size:14px}
+.mode dt{font:600 11px/1.4 var(--num);letter-spacing:.16em;color:var(--brass);margin-top:10px}
+.mode dd{margin:2px 0 0;color:var(--ink2)}
+.mode.rec{border-color:var(--forest);box-shadow:0 0 0 1px var(--forest)}
+.mode.rec::after{content:"建议从这里开始";position:absolute;top:-11px;left:22px;padding:2px 10px;border-radius:99px;background:var(--forest);color:#F3EFE4;font-size:12px;font-weight:700}
+.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.principles div{padding:12px 14px;border-radius:12px;border:1px dashed #1F524288;font-size:14px;color:var(--forest);font-weight:600}
+.principles div small{display:block;font-weight:400;color:var(--ink2);font-size:13px}
+/* 路线图 */
+.road{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:6px}
+.road::before{content:"";position:absolute;left:12px;right:12px;top:15px;height:2px;background:linear-gradient(90deg,var(--brass2),var(--forest))}
+.step{position:relative;padding-top:36px}
+.step::before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--forest)}
+.step.now::before{background:var(--brass2);border-color:var(--brass)}
+.step b{font:600 11px/1.4 var(--num);letter-spacing:.16em;color:var(--brass)}
+.step h4{font-size:16px;margin:4px 0 6px}
+.step p{font-size:13.5px;color:var(--ink2)}
+.decide{display:inline-block;margin-top:8px;font-size:12px;padding:2px 8px;border-radius:99px;background:#A06A1214;color:var(--brass)}
+/* 下一步 */
+.next{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:stretch}
+.next .card h4{font-size:16px;margin-bottom:8px}
+.next .card ul{margin:0;padding-left:18px;color:var(--ink2);font-size:14.5px}
+.next .card.mid{background:var(--forest);color:#F3EFE4;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.next .card.mid b{font:400 44px/1 var(--serif);color:var(--brass2)}
+.next .arr{display:grid;place-items:center;color:var(--forest);font-size:22px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:8px}
+.why div{padding:16px 16px 16px 0}
+.why div+div{padding-left:16px;border-left:1px solid var(--line2)}
+.why b{display:block;font-size:15px;margin-bottom:4px}
+.why span{font-size:13.5px;color:var(--ink2)}
+.closing{margin:56px 0 0;padding:40px 0;border-top:1px solid var(--line);text-align:center}
+.closing p.big{font-size:28px;font-weight:700}
+.closing p.en{font:italic 400 22px var(--serif);color:var(--brass);margin-top:6px}
+.foot{font-size:12px;color:var(--ink3);padding:18px 0 48px;border-top:1px solid var(--line2)}
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:#F3EFE4;font:500 12.5px/1.6 var(--sans);padding:8px 11px;border-radius:8px;box-shadow:0 10px 24px -10px #000a;opacity:0;transition:opacity .12s}
+.tip.on{opacity:1}
+@media (max-width:900px){.engines,.principles,.why{grid-template-columns:1fr 1fr}.modes,.scen,.stairs,.wheel{grid-template-columns:1fr}.road{grid-template-columns:1fr}.road::before{display:none}.own{grid-template-columns:1fr}.own .link{padding:8px}.next{grid-template-columns:1fr}.next .arr{transform:rotate(90deg)}.stats{grid-template-columns:1fr}.stats div+div{border-left:0;padding-left:0;border-top:1px solid #F3EFE433}.stair:nth-child(n){min-height:0;margin:0 0 -1px}}
+@media (max-width:640px){.page{padding:0 18px}.cover h1{font-size:30px}.vs{grid-template-columns:1fr}.vs .arrow,.vs .h{display:none}.vs .k{background:#EFE9DA}}
+@page{size:A4 landscape;margin:10mm}
+@media print{body{background:#fff;font-size:13px}.cover,.roof,.own .yours,.callout,.next .card.mid,.scen .card,.stair,.vs .a,.vs .h{-webkit-print-color-adjust:exact;print-color-adjust:exact}section{padding-top:28px}h2,.lead,.eyebrow{break-after:avoid}figure,.card,.vs,.mode,.stairs,.road,.arch,.wheel,.own,.next,.modes,.why,.callout{break-inside:avoid}details.data{display:none}.cover{padding:40px 0 34px}.lead{break-inside:avoid}.page{max-width:none;padding:0 6mm}.stats{grid-template-columns:repeat(3,1fr)!important}.stats div+div{border-top:0!important;border-left:1px solid #F3EFE433!important;padding-left:22px!important}.engines,.principles,.why{grid-template-columns:repeat(4,1fr)!important}.modes,.scen,.stairs{grid-template-columns:repeat(3,1fr)!important}.wheel{grid-template-columns:340px 1fr!important}.wheel svg{max-height:340px}.road{grid-template-columns:repeat(5,1fr)!important}.road::before{display:block!important}.own{grid-template-columns:1.25fr .1fr 1fr!important}.next{grid-template-columns:1fr auto 1fr auto 1fr!important}.next .arr{transform:none!important}.stair{margin:0 -1px 0 0!important}.stair:nth-child(1){min-height:170px!important}.stair:nth-child(2){min-height:205px!important}.stair:nth-child(3){min-height:240px!important}}
+</style>
+</head>
+<body>
+<header class="cover"><div class="page">
+ <div class="brand"><span class="ball"></span>GOLF CLUB <em>360</em></div>
+ <p class="kicker">Find your next game.</p>
+ <h1>把您的球场资源，变成华东最活跃的高尔夫平台</h1>
+ <p class="sub">一张图看懂：和 b-labz 合作，您的获客、成交、留存和经营数据会发生什么变化，投入多久能收回，以及我们可以怎样合作。</p>
+ <div class="stats">
+  <div><b>+59<small>单／月</small></b><span>每天约多 2 单完成订场，示例情境下一年内收回投入</span></div>
+  <div><b>100%</b><span>品牌、客户与交易数据始终归您所有</span></div>
+  <div><b>1–2<small>周</small></b><span>拿到按您自己数据测算的专属方案与正式报价</span></div>
+ </div>
+ <a class="cta" href="demo/" target="_blank" rel="noopener">在线体验完整演示 <span>→</span></a>
+</div></header>
+
+<main class="page">
+
+<section>
+ <p class="eyebrow">Before / After</p>
+ <h2><span class="no">01</span>合作前后，您的生意有什么不同</h2>
+ <p class="lead">您已经有最难复制的东西：球场资源、订场业务和行业关系。平台要做的，是把这些优势变成一条可以复制、可以衡量的增长线。</p>
+ <div class="vs" role="table" aria-label="合作前后对比">
+  <div class="h"></div><div class="h">现在</div><div class="h"></div><div class="h after">合作后</div>
+  <div class="k"><i>01</i>获客</div><div class="b">靠熟人与微信群转介绍，新手不知道从哪里开始</div><div class="arrow">→</div><div class="a">AI 内容持续把新手带进来，每一位新客都知道从哪条内容来</div>
+  <div class="k"><i>02</i>成交</div><div class="b">微信里来回确认时段和价格，人工记账，容易漏单</div><div class="arrow">→</div><div class="a">小程序下单，后台一键确认，状态实时同步到球友手机</div>
+  <div class="k"><i>03</i>留存</div><div class="b">打完就散，三缺一凑不齐，下次再约要重新找人</div><div class="arrow">→</div><div class="a">组局、候补、记分和成绩卡，让球友一来再来</div>
+  <div class="k"><i>04</i>经营</div><div class="b">看不清哪个渠道真正赚钱，扩张靠感觉</div><div class="arrow">→</div><div class="a">每一笔订单的金额、毛利、来源一目了然，预算投在回报最高的地方</div>
+ </div>
+</section>
+
+<section>
+ <p class="eyebrow">The Platform</p>
+ <h2><span class="no">02</span>一个平台，四台引擎</h2>
+ <p class="lead">GOLF CLUB 360 是一个微信小程序加一套营运后台。四台引擎各管一段，营运后台把它们变成您看得见的数据。</p>
+ <div class="arch">
+  <div class="roof">您的品牌 · 您的客户 · 您的数据<small>平台以您的品牌上线，球友与交易沉淀为您自己的资产</small></div>
+  <div class="engines">
+   <div class="engine"><b>Media</b><h4>内容获客</h4><p>新手指南、球场种草、穿搭短片，持续把新人带进来</p></div>
+   <div class="engine"><b>Booking</b><h4>在线订场</h4><p>球场、时段、价格透明，提交后锁价，后台确认</p></div>
+   <div class="engine"><b>Social</b><h4>组局社交</h4><p>三缺一、候补补位、新手友好球局，人带人</p></div>
+   <div class="engine"><b>Score</b><h4>记分留存</h4><p>9／18 洞记分与成绩记录，带来回访与再次订场</p></div>
+  </div>
+  <div class="base"><b>营运后台</b><span>订单确认</span><span>开球时段表</span><span>价格管理</span><span>球局管理</span><span>内容来源追踪</span><span>GMV／毛利看板</span></div>
+ </div>
+ <p class="note">以上功能已做成可操作的完整演示，<a href="demo/" target="_blank" rel="noopener">点此在线体验 →</a>（示范数据，可随时重设）</p>
+</section>
+
+<section>
+ <p class="eyebrow">Growth Loop</p>
+ <h2><span class="no">03</span>增长飞轮：每一圈都带来新客与回购</h2>
+ <div class="wheel">
+  <svg viewBox="0 0 420 420" width="100%" role="img" aria-label="增长飞轮：发现、入门、约球、订场、打球记分、分享回购，循环">
+   <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#1F5242"/></marker></defs>
+   <circle cx="210" cy="210" r="150" fill="none" stroke="#14201A1f" stroke-width="22"/>
+   <g fill="none" stroke="#1F5242" stroke-width="2" marker-end="url(#ah)">
+    <path d="M251.3 65.8A150 150 0 0 1 312.3 100.3"/><path d="M355.5 173.7A150 150 0 0 1 356.2 243.7"/><path d="M314.2 317.9A150 150 0 0 1 253.9 353.4"/><path d="M168.7 354.2A150 150 0 0 1 107.7 319.7"/><path d="M64.5 246.3A150 150 0 0 1 63.8 176.3"/><path d="M105.8 102.1A150 150 0 0 1 166.1 66.6"/>
+   </g>
+   <g font-size="15" font-weight="700" text-anchor="middle" fill="#141A16">
+    <circle cx="210" cy="60" r="30" fill="#173D30"/><text x="210" y="65" fill="#F3EFE4">发现</text>
+    <circle cx="340" cy="135" r="30" fill="#FCFAF4" stroke="#1F5242" stroke-width="1.5"/><text x="340" y="140">入门</text>
+    <circle cx="340" cy="285" r="30" fill="#FCFAF4" stroke="#1F5242" stroke-width="1.5"/><text x="340" y="290">约球</text>
+    <circle cx="210" cy="360" r="30" fill="#A06A12"/><text x="210" y="365" fill="#fff">订场</text>
+    <circle cx="80" cy="285" r="30" fill="#FCFAF4" stroke="#1F5242" stroke-width="1.5"/><text x="80" y="290">记分</text>
+    <circle cx="80" cy="135" r="30" fill="#FCFAF4" stroke="#1F5242" stroke-width="1.5"/><text x="80" y="140">回购</text>
+   </g>
+   <text x="210" y="200" text-anchor="middle" font-size="13" fill="#7C837D">每一圈</text>
+   <text x="210" y="226" text-anchor="middle" font-size="19" font-weight="700" fill="#173D30">新客 ＋ 回购</text>
+  </svg>
+  <ol>
+   <li><span><b>发现</b>短视频与生活方式内容，让对高尔夫好奇的人找到您</span></li>
+   <li><span><b>入门</b>新手指南告诉他第一次下场要准备什么</span></li>
+   <li><span><b>约球</b>新手友好的三缺一球局，不用自己凑人</span></li>
+   <li><span><b>订场</b>透明价格、在线申请，由您的团队确认——这里产生收入</span></li>
+   <li><span><b>记分</b>完场记成绩，留下第一张成绩卡</span></li>
+   <li><span><b>回购</b>固定球友与成绩记录，带来下一次订场与转介绍</span></li>
+  </ol>
+ </div>
+</section>
+
+<section>
+ <p class="eyebrow">Payback</p>
+ <h2><span class="no">04</span>投入多久能收回</h2>
+ <p class="lead">示例：一家每月完成 500 笔订场、每笔毛利 ¥200 的业务，一次性投入 ¥80,000、每月新增营运成本 ¥5,000。看三种增长情境下的每月净效益与累计回报。</p>
+ <div class="scen">
+  <div class="card" style="--c:var(--c1)"><h4>保守情境<span>订场 +10%</span></h4><p class="big">¥5,000<small style="font:500 14px var(--sans);color:var(--ink3)"> ／月</small></p><dl><dt>新增完成订场</dt><dd>50 笔／月</dd><dt>回本时间</dt><dd>16 个月</dd><dt>首年投资回报</dt><dd>−25%</dd></dl></div>
+  <div class="card main" style="--c:var(--c2)"><h4>基准情境<span>订场 +30%</span></h4><p class="big" style="color:#0F6B4A">¥25,000<small style="font:500 14px var(--sans);color:var(--ink3)"> ／月</small></p><dl><dt>新增完成订场</dt><dd>150 笔／月</dd><dt>回本时间</dt><dd>3.2 个月</dd><dt>首年投资回报</dt><dd>275%</dd></dl></div>
+  <div class="card" style="--c:var(--c3)"><h4>乐观情境<span>订场 +60%</span></h4><p class="big">¥55,000<small style="font:500 14px var(--sans);color:var(--ink3)"> ／月</small></p><dl><dt>新增完成订场</dt><dd>300 笔／月</dd><dt>回本时间</dt><dd>1.5 个月</dd><dt>首年投资回报</dt><dd>725%</dd></dl></div>
+ </div>
+ <figure>
+  <figcaption><b>12 个月累计净效益</b><span class="legend"><span><i class="d" style="--c:var(--c1)"></i>保守</span><span><i style="--c:var(--c2)"></i>基准</span><span><i style="--c:var(--c3)"></i>乐观</span></span></figcaption>
+  <svg id="cum" viewBox="0 0 880 350" width="100%" role="img" aria-label="12 个月累计净效益：从负 8 万起步；保守情境第 12 个月为负 2 万，第 16 个月回本；基准情境 3.2 个月回本，第 12 个月为正 22 万；乐观情境 1.5 个月回本，第 12 个月为正 58 万">
+   <g class="axis">
+    <line x1="70" x2="720" y1="30" y2="30" stroke="#14201A12"/><line x1="70" x2="720" y1="71.4" y2="71.4" stroke="#14201A12"/><line x1="70" x2="720" y1="112.9" y2="112.9" stroke="#14201A12"/><line x1="70" x2="720" y1="154.3" y2="154.3" stroke="#14201A12"/><line x1="70" x2="720" y1="195.7" y2="195.7" stroke="#14201A12"/><line x1="70" x2="720" y1="237.1" y2="237.1" stroke="#14201A12"/><line x1="70" x2="720" y1="320" y2="320" stroke="#14201A12"/>
+    <text x="60" y="34" text-anchor="end">60 万</text><text x="60" y="117" text-anchor="end">40 万</text><text x="60" y="200" text-anchor="end">20 万</text><text x="60" y="283" text-anchor="end">0</text><text x="60" y="324" text-anchor="end">−10 万</text>
+    <text x="70" y="342" text-anchor="start" dx="-20">开始（投入 −8 万）</text><text x="232.5" y="342" text-anchor="middle">第 3 月</text><text x="395" y="342" text-anchor="middle">第 6 月</text><text x="557.5" y="342" text-anchor="middle">第 9 月</text><text x="720" y="342" text-anchor="middle">第 12 月</text>
+   </g>
+   <line x1="70" x2="720" y1="278.6" y2="278.6" stroke="#14201A" stroke-width="1.2"/>
+   <text x="78" y="270" class="dl2">回本线</text>
+   <line id="xh" x1="0" x2="0" y1="30" y2="320" stroke="#14201A55" stroke-dasharray="3 3" visibility="hidden"/>
+   <polyline points="70,311.7 720,286.9" fill="none" stroke="#4A6FB8" stroke-width="2" stroke-dasharray="6 5"/>
+   <polyline points="70,311.7 720,187.4" fill="none" stroke="#13845C" stroke-width="2.5"/>
+   <polyline points="70,311.7 720,38.3" fill="none" stroke="#A06A12" stroke-width="2"/>
+   <circle cx="70" cy="311.7" r="4.5" fill="#141A16" stroke="#FCFAF4" stroke-width="2"/>
+   <circle cx="148.8" cy="278.6" r="5" fill="#A06A12" stroke="#FCFAF4" stroke-width="2"/>
+   <circle cx="243.3" cy="278.6" r="5.5" fill="#13845C" stroke="#FCFAF4" stroke-width="2"/>
+   <text x="252" y="298" class="dl2">基准 3.2 个月回本</text>
+   <circle cx="720" cy="38.3" r="4.5" fill="#A06A12" stroke="#FCFAF4" stroke-width="2"/><text x="732" y="43" class="dl">乐观 +58 万</text>
+   <circle cx="720" cy="187.4" r="5" fill="#13845C" stroke="#FCFAF4" stroke-width="2"/><text x="732" y="192" class="dl">基准 +22 万</text>
+   <circle cx="720" cy="286.9" r="4.5" fill="#4A6FB8" stroke="#FCFAF4" stroke-width="2"/><text x="732" y="300" class="dl">保守 −2 万</text><text x="732" y="316" class="dl2">第 16 个月回本</text>
+   <rect id="hit" x="70" y="30" width="650" height="290" fill="transparent"/>
+  </svg>
+  <details class="data"><summary>查看数据表</summary>
+   <table><thead><tr><th>情境</th><th>新增订场</th><th>每月净效益</th><th>回本时间</th><th>第 12 个月累计</th><th>首年投资回报</th></tr></thead><tbody>
+    <tr><td>保守（+10%）</td><td class="n">50 笔</td><td class="n">¥5,000</td><td class="n">16 个月</td><td class="n">−¥20,000</td><td class="n">−25%</td></tr>
+    <tr><td>基准（+30%）</td><td class="n">150 笔</td><td class="n">¥25,000</td><td class="n">3.2 个月</td><td class="n">¥220,000</td><td class="n">275%</td></tr>
+    <tr><td>乐观（+60%）</td><td class="n">300 笔</td><td class="n">¥55,000</td><td class="n">1.5 个月</td><td class="n">¥580,000</td><td class="n">725%</td></tr>
+   </tbody></table></details>
+ </figure>
+ <div class="callout"><b>59 单</b><p>一年内收回投入的门槛：每月多完成约 59 笔订场（每天约 2 单，增长约 12%）。回本之后，每个月的净效益都是新增利润。</p></div>
+ <p class="note">计算方式：月净效益 ＝ 新增完成订场 × 每笔毛利 − 每月新增营运成本；回本时间 ＝ 投入 ÷ 月净效益；首年投资回报 ＝（12 × 月净效益 − 投入）÷ 投入。投入与成本为示例假设，实际以正式报价为准；未计上线爬坡期与税费，不构成收益承诺。会谈时可在演示的「收益试算」中输入您的真实数字。</p>
+</section>
+
+<section>
+ <p class="eyebrow">Revenue Layers</p>
+ <h2><span class="no">05</span>收入一层层叠上去</h2>
+ <p class="lead">平台带来的不只是更多订单。先把订场做大，再把活动和议价做强，最终长成华东的高尔夫生活方式生态。</p>
+ <div class="stairs">
+  <div class="stair"><b>近期 · 第一版上线后</b><h4>订场做大</h4><ul><li>新客通过内容与球局进来</li><li>线上成交，减少漏单与人工</li><li>回购与转介绍提升</li></ul></div>
+  <div class="stair"><b>中期 · 交易稳定后</b><h4>活动与议价</h4><ul><li>球局、赛事与企业团建</li><li>用交易数据和球场谈更好的协议价</li><li>按来源投放，降低获客成本</li></ul></div>
+  <div class="stair"><b>长期 · 平台成形后</b><h4>生活方式生态</h4><ul><li>会员与俱乐部</li><li>教练、球具、旅游合作</li><li>复制到华东更多城市</li></ul></div>
+ </div>
+ <div class="ground"><span>您现有的订场分销业务</span><span>每一层都建立在同一套平台与数据之上</span></div>
+</section>
+
+<section>
+ <p class="eyebrow">Ownership</p>
+ <h2><span class="no">06</span>核心资产，始终在您手里</h2>
+ <p class="lead">平台是您的平台，我们是帮您把它做起来的人。</p>
+ <div class="own">
+  <div class="yours"><h4>归您所有</h4><ul><li>品牌与小程序主体</li><li>球场资源与合作渠道</li><li>球友客户与全部交易数据</li><li>订场收入：球友付款直接进入您的商户号</li></ul></div>
+  <div class="link">×</div>
+  <div class="ours"><h4>b-labz 提供</h4><ul><li>产品规划与设计</li><li>技术开发、部署与维护</li><li>AI 内容生产与获客测试</li><li>经营数据分析与迭代建议</li></ul></div>
+ </div>
+ <div class="flowline"><span>球友</span><em>订场款 →</em><span>您的商户号</span><em>服务费 →</em><span>b-labz</span><span style="border-style:dashed;color:var(--ink2)">b-labz 不经手订场款</span></div>
+</section>
+
+<section>
+ <p class="eyebrow">How We Work Together</p>
+ <h2><span class="no">07</span>三种合作方式，由您决定走多远</h2>
+ <p class="lead">从小处起步，每一段都有看得见的交付，再用真实数据决定是否进入下一段。</p>
+ <div class="modes">
+  <div class="mode rec"><span class="l">A</span><h4>平台建设</h4><dl><dt>您得到</dt><dd>订场、组局与营运后台的第一版，可正式上线使用</dd><dt>付费方式</dt><dd>一次性项目费，按节点分期；后续维护与新功能另计</dd><dt>适合</dt><dd>想先把交易跑起来、看到实际成效</dd></dl></div>
+  <div class="mode"><span class="l">B</span><h4>增长服务</h4><dl><dt>您得到</dt><dd>每月 AI 短片内容与获客测试，来源可追踪到每一单</dd><dt>付费方式</dt><dd>按月服务费，依内容数量与范围</dd><dt>适合</dt><dd>平台上线后，想持续带来新客</dd></dl></div>
+  <div class="mode"><span class="l">C</span><h4>长期战略合作</h4><dl><dt>您得到</dt><dd>持续迭代的平台与增长团队，共同扩张华东</dd><dt>付费方式</dt><dd>基础费＋按合格成交共同分享增长</dd><dt>适合</dt><dd>交易数据稳定后，双方一起把平台做大</dd></dl></div>
+ </div>
+ <div class="principles">
+  <div>小步起步<small>先做需求规划，再决定开发</small></div>
+  <div>每段有交付<small>看得到、用得上才进入下一段</small></div>
+  <div>数据说话<small>以真实订单与来源数据决策</small></div>
+  <div>您决定节奏<small>每个阶段结束都可以重新选择</small></div>
+ </div>
+</section>
+
+<section>
+ <p class="eyebrow">Roadmap</p>
+ <h2><span class="no">08</span>合作路线图</h2>
+ <div class="road">
+  <div class="step now"><b>第 0 步 · 1–2 周</b><h4>需求规划</h4><p>用您的数据算出专属方案、上线范围与正式报价</p><span class="decide">您决定是否开发</span></div>
+  <div class="step"><b>第 1 步 · 约 6–8 周</b><h4>交易与组局</h4><p>球场、订场、组局、营运后台；专职团队投入</p><span class="decide">上线验收</span></div>
+  <div class="step"><b>第 2 步</b><h4>内容获客</h4><p>AI 短片、新手体验、来源追踪</p><span class="decide">看数据再加码</span></div>
+  <div class="step"><b>第 3 步</b><h4>社区与赛事</h4><p>记分、个人主页、俱乐部、赛事</p></div>
+  <div class="step"><b>第 4 步</b><h4>生态扩张</h4><p>教练、旅游、球具、企业活动与会员</p></div>
+ </div>
+ <p class="note">各阶段时程以需求规划后的正式方案为准。</p>
+</section>
+
+<section>
+ <p class="eyebrow">Why b-labz</p>
+ <h2><span class="no">09</span>为什么选择我们</h2>
+ <div class="why">
+  <div><b>演示已经做好</b><span>不是概念图，是可以现场操作的完整流程</span></div>
+  <div><b>产品＋技术＋内容</b><span>一个团队交付，不用您来回协调多家</span></div>
+  <div><b>体育社交平台经验</b><span>组局、报名、候补与后台管理有成熟做法</span></div>
+  <div><b>小步可验收</b><span>每一段都有明确交付，风险可控</span></div>
+ </div>
+</section>
+
+<section>
+ <p class="eyebrow">Next Step</p>
+ <h2><span class="no">10</span>下一步：两周拿到您的专属方案</h2>
+ <div class="next" style="margin-top:18px">
+  <div class="card"><h4>您提供</h4><ul><li>每月完成订场量</li><li>每笔平均毛利</li><li>现在的下单与确认方式</li><li>华东优先拓展的城市</li></ul></div>
+  <div class="arr">→</div>
+  <div class="card mid"><b>1–2 周</b><p style="color:#D7DDD4;margin-top:8px">需求规划</p></div>
+  <div class="arr">→</div>
+  <div class="card"><h4>您拿到</h4><ul><li>按您数据测算的回本方案</li><li>第一版上线范围与时程</li><li>正式报价与付款节点</li><li>内容获客测试计划</li></ul></div>
+ </div>
+ <div class="closing"><p class="big">把下一场球，变成下一位常客。</p><p class="en">Find your next game.</p></div>
+</section>
+
+<p class="foot">本图解中的测算均为示例假设，非收益预测或承诺；投入金额与营运成本以正式报价为准。文中提到的演示原型使用虚构数据。</p>
+</main>
+<div class="tip" id="tip" role="tooltip"></div>
+<script>
+// 累计曲线：悬停显示当月三种情境的累计净效益。
+(()=>{const svg=document.getElementById('cum'),hit=document.getElementById('hit'),xh=document.getElementById('xh'),tip=document.getElementById('tip')
+const fmt=v=>(v<0?'−':'')+'¥'+Math.abs(v).toLocaleString('zh-CN')
+hit.addEventListener('mousemove',e=>{const pt=svg.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;const p=pt.matrixTransform(svg.getScreenCTM().inverse())
+ const m=Math.max(0,Math.min(12,Math.round((p.x-70)/54.167)));const x=70+m*54.167;xh.setAttribute('x1',x);xh.setAttribute('x2',x);xh.setAttribute('visibility','visible')
+ tip.innerHTML='<b>'+(m?'第 '+m+' 个月':'开始')+'</b><br>乐观　'+fmt(-80000+55000*m)+'<br>基准　'+fmt(-80000+25000*m)+'<br>保守　'+fmt(-80000+5000*m)
+ tip.style.left=Math.min(e.clientX+16,innerWidth-200)+'px';tip.style.top=(e.clientY+16)+'px';tip.classList.add('on')})
+hit.addEventListener('mouseleave',()=>{xh.setAttribute('visibility','hidden');tip.classList.remove('on')})})()
+</script>
+</body>
+</html>

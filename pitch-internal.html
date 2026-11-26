@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GOLF CLUB 360｜內部 Pitch 手冊（Baron × 老王）</title>
+<meta name="robots" content="noindex">
+<style>
+/* 內部作戰手冊：象牙紙底 × 森林綠 × 香檳金。字型取自系統，離線可用。 */
+:root{
+ --paper:#F4EFE3;--paper2:#EBE4D3;--card:#FBF8F1;--ink:#141A16;--ink2:#4E5650;--ink3:#7C837D;--line:#14201A26;--line2:#14201A14;
+ --forest:#173D30;--forest2:#1F5242;--brass:#A06A12;--brass2:#C8A96B;--mint:#13845C;--warn:#B4561E;--red:#A83A2A;
+ --tc:"Microsoft JhengHei UI","Microsoft JhengHei","PingFang TC","Noto Sans TC","Microsoft YaHei",system-ui,sans-serif;
+ --sc:"PingFang SC","Microsoft YaHei UI","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+ --serif:"Bodoni Moda","Bodoni 72","Bodoni MT","Didot",Georgia,var(--tc);
+ --num:"Bahnschrift","DIN Alternate","DIN 2014","Segoe UI",var(--tc)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--paper);color:var(--ink);font:15.5px/1.75 var(--tc);-webkit-font-smoothing:antialiased}
+[lang="zh-CN"]{font-family:var(--sc)}
+h1,h2,h3,h4,p{margin:0}
+a{color:inherit}
+.wrap{display:grid;grid-template-columns:230px minmax(0,880px);gap:56px;max-width:1220px;margin:0 auto;padding:0 32px 80px}
+/* 封面 */
+.cover{position:relative;overflow:hidden;background:var(--forest);color:#F3EFE4;padding:56px 0 46px;margin-bottom:46px}
+.cover::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,#F3EFE412 1.2px,transparent 1.8px) 0 0/12px 12px,radial-gradient(circle,#F3EFE412 1.2px,transparent 1.8px) 6px 6px/12px 12px;mask:linear-gradient(90deg,transparent 40%,#000);-webkit-mask:linear-gradient(90deg,transparent 40%,#000)}
+.cover .in{position:relative;max-width:1220px;margin:0 auto;padding:0 32px}
+.stamp{display:inline-flex;gap:10px;align-items:center;padding:5px 12px;border:1.5px solid #E9B9A6;border-radius:4px;color:#F3C9B8;font:600 12px/1.4 var(--num);letter-spacing:.18em;transform:rotate(-1.5deg)}
+.kicker{font:italic 400 22px/1.2 var(--serif);color:var(--brass2);margin:22px 0 6px}
+.cover h1{font-size:42px;line-height:1.2;font-weight:700;letter-spacing:.02em}
+.cover h1 em{font:italic 400 1em var(--serif);color:var(--brass2)}
+.cover p{color:#D9DED6;max-width:720px;margin-top:12px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font:500 12px/1.5 var(--num);letter-spacing:.12em;color:#BFC8BE}
+/* 目錄 */
+nav.toc{position:sticky;top:20px;align-self:start;font-size:13.5px}
+nav.toc b{display:block;font:600 11px/1.4 var(--num);letter-spacing:.2em;color:var(--brass);margin-bottom:10px}
+nav.toc a{display:flex;gap:10px;padding:6px 0 6px 12px;border-left:1px solid var(--line);text-decoration:none;color:var(--ink2)}
+nav.toc a:hover,nav.toc a.on{color:var(--ink);border-left:2px solid var(--brass);padding-left:11px}
+nav.toc a i{font:italic 400 13px/1.6 var(--serif);color:var(--brass);min-width:18px}
+/* 章節 */
+section{padding:6px 0 40px;border-bottom:1px solid var(--line2);margin-bottom:40px}
+.eyebrow{display:flex;align-items:center;gap:10px;font:600 11px/1.4 var(--num);letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin-bottom:6px}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor}
+h2{font-size:28px;line-height:1.3;font-weight:700;margin-bottom:8px}
+h2 .no{font:italic 400 30px var(--serif);color:var(--brass);margin-right:10px}
+h3{font-size:18px;font-weight:700;margin:26px 0 10px}
+.lead{color:var(--ink2);font-size:16.5px;max-width:760px;margin-bottom:18px}
+.muted{color:var(--ink3);font-size:13px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:18px 20px;box-shadow:0 1px 0 #fff inset,0 14px 28px -24px #14201A55}
+.card h4{font-size:15.5px;margin-bottom:6px}
+.card p,.card li{color:var(--ink2);font-size:14.5px}
+.card ul{margin:6px 0 0;padding-left:18px}
+.num{font:400 40px/1 var(--serif);color:var(--forest)}
+.tag{display:inline-block;padding:1px 9px;border-radius:99px;border:1px solid var(--line);font-size:12px;color:var(--ink2);margin:0 4px 4px 0}
+.tag.g{border-color:#13845C66;color:var(--mint)}.tag.r{border-color:#A83A2A55;color:var(--red)}.tag.b{border-color:#A06A1266;color:var(--brass)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:8px 0}
+th{font:600 11px/1.4 var(--num);letter-spacing:.14em;color:var(--ink3);text-align:left;padding:8px 10px;border-bottom:1.5px solid var(--ink)}
+td{padding:10px;border-bottom:1px solid var(--line2);vertical-align:top}
+td.n{font:600 14px var(--num);white-space:nowrap}
+/* 話術卡 */
+.say{position:relative;margin:12px 0;padding:16px 20px 16px 22px;background:#fff;border:1px solid var(--line2);border-left:3px solid var(--forest);border-radius:4px 12px 12px 4px}
+.say .who{display:flex;justify-content:space-between;align-items:center;gap:10px;font:600 11px/1.4 var(--num);letter-spacing:.16em;color:var(--forest);margin-bottom:6px}
+.say q{display:block;quotes:none;white-space:pre-line;font-size:16px;line-height:1.85;color:var(--ink)}
+.say .why{margin-top:8px;font-size:13px;color:var(--ink3)}
+.copy{font:600 11px/1 var(--num);letter-spacing:.1em;border:1px solid var(--line);background:transparent;border-radius:99px;padding:5px 10px;cursor:pointer;color:var(--ink2)}
+.copy:hover{border-color:var(--forest);color:var(--forest)}
+.copy.ok{background:var(--forest);color:#fff;border-color:var(--forest)}
+/* 會議時間軸 */
+.run{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin:10px 0 8px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+.run div{padding:12px 12px 14px;border-right:1px solid var(--line2);position:relative}
+.run div:last-child{border-right:0}
+.run b{display:block;font:400 26px/1 var(--serif);color:var(--forest)}
+.run b small{font:600 11px var(--num);letter-spacing:.1em;color:var(--ink3);margin-left:3px}
+.run span{display:block;font-weight:700;font-size:14px;margin-top:8px}
+.run em{display:block;font-style:normal;font-size:12px;color:var(--ink3)}
+.run .bar{position:absolute;left:0;bottom:0;height:3px;background:var(--brass2)}
+.run .lw{color:var(--brass)}.run .bz{color:var(--forest)}
+/* 異議 */
+details.obj{background:var(--card);border:1px solid var(--line2);border-radius:12px;margin:10px 0;overflow:hidden}
+details.obj summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:baseline;padding:14px 18px;font-weight:700}
+details.obj summary::-webkit-details-marker{display:none}
+details.obj summary i{font:italic 400 18px var(--serif);color:var(--brass);min-width:24px}
+details.obj summary::after{content:"＋";margin-left:auto;color:var(--ink3);font-weight:400}
+details.obj[open] summary::after{content:"－"}
+details.obj .body{padding:0 18px 16px 56px}
+.floor{margin-top:10px;padding:10px 14px;border-radius:8px;background:#A83A2A0d;border:1px dashed #A83A2A55;font-size:14px;color:#6E2A20}
+.floor b{color:var(--red)}
+/* 紅線 */
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dos ul{list-style:none;margin:0;padding:0}
+.dos li{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line2);font-size:14.5px}
+.dos .no-list li::before{content:"✕";color:var(--red);font-weight:700}
+.dos .yes-list li::before{content:"✓";color:var(--mint);font-weight:700}
+/* 圖表 */
+figure{margin:14px 0 6px;background:var(--card);border:1px solid var(--line2);border-radius:14px;padding:18px 20px 12px}
+figcaption{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:8px}
+figcaption b{font-size:15.5px}
+figcaption span{font-size:12.5px;color:var(--ink3)}
+svg text{font-family:var(--num)}
+.axis{font-size:11px;fill:var(--ink3)}
+.lab{font-size:13px;fill:var(--ink);font-family:var(--tc)}
+.val{font-size:12.5px;fill:var(--ink2);font-weight:600}
+.hit{fill:transparent;cursor:default}
+.mile{display:grid;grid-template-columns:4fr 3fr 2fr 1fr;gap:3px;margin:8px 0 4px}
+.mile i{display:block;height:22px;border-radius:4px}
+.mile div:nth-child(1) i{background:#173D30}.mile div:nth-child(2) i{background:#2E6B55}.mile div:nth-child(3) i{background:#5C9479}.mile div:nth-child(4) i{background:#9DBFAA}
+.mile b{display:block;font:600 15px var(--num);margin-top:6px}
+.mile small{display:block;font-size:12px;color:var(--ink3);line-height:1.4}
+.path{display:grid;grid-template-columns:repeat(3,1fr);gap:0;align-items:end;margin-top:8px}
+.path .st{border:1px solid var(--line);border-radius:12px 12px 0 0;padding:14px 16px;background:var(--card);margin-right:-1px}
+.path .st:nth-child(1){min-height:150px}.path .st:nth-child(2){min-height:190px;background:#EEF3EE}.path .st:nth-child(3){min-height:230px;background:#E3ECE5}
+.path .st b{display:block;font:italic 400 26px var(--serif);color:var(--forest)}
+.path .st h4{margin:4px 0 6px;font-size:15px}
+.path .st p{font-size:13.5px;color:var(--ink2)}
+.flow{display:flex;align-items:stretch;gap:0;margin:10px 0}
+.flow .node{flex:1;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:14px;text-align:center}
+.flow .node b{display:block;font-size:15px}
+.flow .node small{display:block;color:var(--ink3);font-size:12.5px}
+.flow .arr{display:flex;flex-direction:column;justify-content:center;align-items:center;min-width:120px;font-size:12px;color:var(--ink2);text-align:center;padding:0 6px}
+.flow .arr::before{content:"";display:block;width:100%;height:1.5px;background:var(--forest);margin-bottom:6px;mask:linear-gradient(90deg,#000 92%,transparent);-webkit-mask:linear-gradient(90deg,#000 92%,transparent)}
+.flow .arr.back::before{background:var(--brass)}
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:#F3EFE4;font:500 12.5px/1.5 var(--tc);padding:7px 10px;border-radius:8px;box-shadow:0 10px 24px -10px #000a;opacity:0;transform:translateY(4px);transition:opacity .12s,transform .12s;max-width:260px}
+.tip.on{opacity:1;transform:none}
+.check{list-style:none;margin:0;padding:0}
+.check li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line2)}
+.check li::before{content:"";flex:none;width:16px;height:16px;margin-top:5px;border:1.5px solid var(--forest);border-radius:4px}
+.footer{color:var(--ink3);font-size:12.5px;padding-top:10px}
+.links td{vertical-align:middle}.links td a{color:var(--forest);font-weight:700}.links code{font:500 12.5px var(--num);color:var(--ink2);word-break:break-all}
+.links tr.warn td:first-child{color:var(--red)}
+@media (max-width:980px){.wrap{grid-template-columns:1fr}nav.toc{display:none}.grid4{grid-template-columns:1fr 1fr}.run{grid-template-columns:repeat(3,1fr)}.grid3{grid-template-columns:1fr}}
+@media (max-width:640px){.grid2,.dos,.path{grid-template-columns:1fr}.cover h1{font-size:32px}.flow{flex-direction:column}.flow .arr{min-height:44px}.run{grid-template-columns:1fr 1fr}}
+@page{size:A4;margin:12mm}
+@media print{body{background:#fff;font-size:12.5px}h2,h3,.lead{break-after:avoid}nav.toc,.copy{display:none}.wrap{display:block;padding:0}.cover{-webkit-print-color-adjust:exact;print-color-adjust:exact}section{break-inside:auto}figure,.card,.say,details.obj,.run{break-inside:avoid}details.obj .body{display:block}}
+</style>
+</head>
+<body>
+<header class="cover"><div class="in">
+ <span class="stamp">INTERNAL · 內部文件 · 請勿轉發客戶</span>
+ <p class="kicker">Find your next game — and close the next deal.</p>
+ <h1>GOLF CLUB 360 <em>Pitch</em> 手冊</h1>
+ <p>給老王：見高爾夫客戶時怎麼開場、怎麼問、怎麼示範、怎麼收尾。報價、付款與分成全部是我們的內部假設，只在這份文件裡，不在客戶面前出示。</p>
+ <div class="meta"><span>BARON × 老王</span><span>SZ-001 · 2026-11-26</span><span>話術用簡體，可直接照念</span></div>
+</div></header>
+
+<div class="wrap">
+<nav class="toc" aria-label="目錄"><b>CONTENTS</b>
+ <a href="#s0"><i>00</i>一頁看懂</a><a href="#s1"><i>01</i>客戶是誰</a><a href="#s2"><i>02</i>我們怎麼賺錢</a><a href="#s3"><i>03</i>分工</a><a href="#s4"><i>04</i>會議流程</a><a href="#s5"><i>05</i>電梯話術</a><a href="#s6"><i>06</i>探詢問題</a><a href="#s7"><i>07</i>Demo 話術</a><a href="#s8"><i>08</i>異議處理</a><a href="#s9"><i>09</i>紅線</a><a href="#s10"><i>10</i>收尾與跟進</a>
+</nav>
+<main>
+
+<section id="s0">
+ <p class="eyebrow">TL;DR</p>
+ <h2><span class="no">00</span>一頁看懂</h2>
+ <p class="lead">我們不是去「接一個小程序外包」。我們是去幫她把<b>訂場、約球、記分、新手獲客</b>串成一個會自己長大的平台：她出球場資源和客戶，我們出產品、技術和 AI 內容。</p>
+ <div class="grid2">
+  <div class="card"><h4>這次見面的目標，不是簽約</h4><p>帶回四樣東西：</p><ul><li>每月完成訂場量、每單毛利</li><li>現在怎麼成交（微信人工、系統、技術團隊）</li><li>第一階段預算級別與真正的決策人</li><li>同意下一步：<b>付費需求規劃</b>（1–2 週，¥5,000–10,000，可折抵開發費）</li></ul></div>
+  <div class="card"><h4>三條紅線</h4><ul><li><b>不</b>承諾免費做全平台</li><li><b>不</b>接無底費的純分成</li><li><b>不</b>保證獲客效果或訂單數</li></ul><p style="margin-top:10px">其他都可以談：範圍可以縮、階段可以拆、付款可以分期。</p></div>
+ </div>
+ <div class="grid3" style="margin-top:14px">
+  <div class="card"><span class="num">7′</span><h4>可操作的完整 Demo</h4><p>同一筆訂單從新手內容走到營運確認，現場就能點。</p></div>
+  <div class="card"><span class="num">¥</span><h4>用她的數字算回本</h4><p>收益試算可以當場改成她的訂場量與毛利。</p></div>
+  <div class="card"><span class="num">AI</span><h4>內容獲客能力</h4><p>腳本、分鏡、短片、來源標籤，一路追到成交。</p></div>
+ </div>
+ <div class="card links" style="margin-top:14px"><h4>三個網址</h4>
+  <table><tbody>
+   <tr><td>客戶版提案</td><td><code>https://bohamfu-ops.github.io/sz-001-pitch-docs/proposal-client.html</code></td><td><a href="proposal-client.html" target="_blank" rel="noopener">開啟</a></td><td><button class="copy" data-copy="https://bohamfu-ops.github.io/sz-001-pitch-docs/proposal-client.html">複製</button></td></tr>
+   <tr><td>GOLF CLUB 360 線上 Demo</td><td><code>https://bohamfu-ops.github.io/sz-001-pitch-docs/demo/</code></td><td><a href="demo/" target="_blank" rel="noopener">開啟</a></td><td><button class="copy" data-copy="https://bohamfu-ops.github.io/sz-001-pitch-docs/demo/">複製</button></td></tr>
+   <tr class="warn"><td>本手冊（內部）</td><td><code>https://bohamfu-ops.github.io/sz-001-pitch-docs/pitch-internal.html</code></td><td colspan="2">只傳給老王</td></tr>
+  </tbody></table>
+  <p class="muted">前兩個可以直接傳給客戶。Demo 資料只存在對方自己的瀏覽器，右上「重设」可回到初始狀態。</p></div>
+</section>
+
+<section id="s1">
+ <p class="eyebrow">CLIENT PROFILE</p>
+ <h2><span class="no">01</span>客戶是誰、我們知道多少</h2>
+ <p class="lead">以下「已知」全部是客戶自述，還沒有被數據驗證。「未知」就是這次要問出來的。</p>
+ <div class="grid2">
+  <div class="card"><h4><span class="tag g">已知 · 客戶自述</span></h4><ul>
+   <li>訂場分銷是主要利潤，賽事也靠訂場</li><li>浙江全覆蓋，想擴張華東</li><li>想做「高爾夫版攜程＋社交」，切新手市場，加約球與記分</li><li>認同老王提的「新手內容量產 → 種草 → 留資 → 進預約小程序」，<b>但沒有承諾採購</b></li></ul></div>
+  <div class="card"><h4><span class="tag r">未知 · 這次要問</span></h4><ul>
+   <li>月訂場量、平均交易額、每單毛利、回購率</li><li>現有成交方式、系統、技術團隊</li><li>預算、決策人、出資人</li><li>球場供給方式（配額／協議價／逐筆詢價）</li><li>華東先做哪些城市、內容與球局的營運人力</li></ul></div>
+ </div>
+ <h3>她說的需求 vs 她真正要的</h3>
+ <table><thead><tr><th>她說要</th><th>背後的生意目的</th><th>我們怎麼接</th></tr></thead><tbody>
+  <tr><td>訂場</td><td>掌控交易與利潤</td><td>小程序下單＋後台一鍵確認，每單看得到毛利</td></tr>
+  <tr><td>約球</td><td>降低新手參與門檻</td><td>三缺一、候補、新手友好球局</td></tr>
+  <tr><td>記分</td><td>提高使用頻率與留存</td><td>9／18 洞記分、成績卡，帶回訪與再次訂場</td></tr>
+  <tr><td>新手內容</td><td>建立自己的獲客渠道</td><td>AI 短片＋來源標籤，花多少、來多少、成交多少</td></tr>
+ </tbody></table>
+ <p class="muted">競品提醒：市面上已有 App 宣稱提供訂場、記分、約球（例如雲高）。不要說「市場是空白」，也不要在客戶面前點名批評。我們的差異是：她自己的平台、她的數據、加上新手獲客這一段。</p>
+</section>
+
+<section id="s2">
+ <p class="eyebrow">OUR BUSINESS MODEL · 內部</p>
+ <h2><span class="no">02</span>我們怎麼賺錢</h2>
+ <p class="lead">定位是「產品化＋開發收入」，長期分成保留談判空間。順序很重要：先拿開發費建立現金流，再用內容月費證明能帶來生意，有了交易數據才談分成。</p>
+
+ <figure>
+  <figcaption><b>各種收費模式的首年收入區間</b><span>RMB · 依原企畫區間 × 12 個月推算，未扣成本、未計爬坡，非報價</span></figcaption>
+  <svg id="rev" viewBox="0 0 800 250" width="100%" role="img" aria-label="首年收入區間：A 專案開發 5 到 9 萬；B 增長夥伴 9.6 到 36 萬；C 基礎費加分成 12 到 15 萬；SaaS 授權 5.6 到 11.2 萬">
+   <g class="axis"><line x1="220" y1="20" x2="220" y2="214" stroke="#14201A33"/><line x1="355" y1="20" x2="355" y2="214" stroke="#14201A14"/><line x1="490" y1="20" x2="490" y2="214" stroke="#14201A14"/><line x1="625" y1="20" x2="625" y2="214" stroke="#14201A14"/><line x1="760" y1="20" x2="760" y2="214" stroke="#14201A14"/>
+    <text x="220" y="234" text-anchor="middle">0</text><text x="355" y="234" text-anchor="middle">10 萬</text><text x="490" y="234" text-anchor="middle">20 萬</text><text x="625" y="234" text-anchor="middle">30 萬</text><text x="760" y="234" text-anchor="middle">40 萬</text></g>
+   <g>
+    <text class="lab" x="0" y="50">A 專案開發制</text><text class="axis" x="0" y="66">MVP 一次性，維護另計</text>
+    <rect x="287.5" y="44" width="54" height="14" rx="4" fill="#1F5242"/><text class="val" x="350" y="56">¥5–9 萬</text>
+    <rect class="hit" x="0" y="34" width="800" height="40" data-tip="A 專案開發制：MVP ¥50,000–90,000（6–8 週，需專職）；之後維護與功能加購另計"/>
+    <text class="lab" x="0" y="100">B 增長夥伴</text><text class="axis" x="0" y="116">AI 內容與獲客月費</text>
+    <rect x="349.6" y="94" width="356.4" height="14" rx="4" fill="#1F5242"/><text class="val" x="714" y="106">¥9.6–36 萬</text>
+    <rect class="hit" x="0" y="84" width="800" height="40" data-tip="B 增長夥伴：¥8,000–30,000／月 × 12，依內容量（30／60 支）與範圍"/>
+    <text class="lab" x="0" y="150">C 基礎費＋分成</text><text class="axis" x="0" y="166">分成以示例 ¥7,500／月計</text>
+    <rect x="382" y="144" width="40.5" height="14" rx="4" fill="#1F5242"/><text class="val" x="431" y="156">¥12–15 萬</text>
+    <rect class="hit" x="0" y="134" width="800" height="40" data-tip="C 基礎費＋分成：基礎費 ¥30,000–60,000＋示例分成 ¥7,500／月 × 12（見下方試算）"/>
+    <text class="lab" x="0" y="200">備選 SaaS 授權</text><text class="axis" x="0" y="216">導入費＋月費</text>
+    <rect x="295.6" y="194" width="75.6" height="14" rx="4" fill="#9DBFAA"/><text class="val" x="380" y="206">¥5.6–11.2 萬</text>
+    <rect class="hit" x="0" y="184" width="800" height="40" data-tip="SaaS 授權：導入 ¥20,000–40,000＋¥3,000–6,000／月 × 12；核心引擎可重複授權時才適合"/>
+   </g>
+  </svg>
+ </figure>
+ <p class="muted">讀法：B 的上限最高但要證明獲客成效；A 最快拿到現金；C 要等她有穩定交易數據。實際組合通常是 A＋B，第二年再談 C。</p>
+
+ <h3>建議的合作路徑：A → B → C</h3>
+ <div class="path">
+  <div class="st"><b>A</b><h4>技術開發商</h4><p>MVP ¥50,000–90,000。拿到合理現金流與明確交付。</p></div>
+  <div class="st"><b>B</b><h4>商業增長夥伴</h4><p>¥8,000–30,000／月。用內容與獲客數據證明我們能帶來生意。</p></div>
+  <div class="st"><b>C</b><h4>長期產品戰略夥伴</h4><p>開發費＋月費＋可稽核交易分成。分享平台長大的收益。</p></div>
+ </div>
+
+ <h3>付款節點（以 ¥80,000 MVP 為例）</h3>
+ <div class="mile" role="img" aria-label="付款節點：簽約 40% ¥32,000，核心功能展示 30% ¥24,000，整合交付 20% ¥16,000，驗收 10% ¥8,000">
+  <div data-tip="簽約啟動 40%：¥32,000"><i></i><b>¥32,000</b><small>40% 簽約啟動</small></div>
+  <div data-tip="核心功能展示 30%：¥24,000"><i></i><b>¥24,000</b><small>30% 核心功能展示</small></div>
+  <div data-tip="整合交付 20%：¥16,000"><i></i><b>¥16,000</b><small>20% 整合交付</small></div>
+  <div data-tip="驗收 10%：¥8,000"><i></i><b>¥8,000</b><small>10% 驗收</small></div>
+ </div>
+ <p class="muted">需求規劃另收 ¥5,000–10,000，約定可折抵。合約要寫清楚範圍、驗收、修改次數、IP、維護、第三方費用與逾期停工。</p>
+
+ <div class="grid2" style="margin-top:18px">
+  <div class="card"><h4>分成試算（模式 C，內部預設）</h4>
+   <table><tbody>
+    <tr><td>合格完成訂單</td><td class="n">300 筆／月</td></tr>
+    <tr><td>單筆貢獻毛利</td><td class="n">¥150</td></tr>
+    <tr><td>分成 10%</td><td class="n">¥4,500／月</td></tr>
+    <tr><td>固定服務費</td><td class="n">¥3,000／月</td></tr>
+    <tr><td><b>每月經常性收入</b></td><td class="n"><b>¥7,500</b>（年 ¥90,000）</td></tr>
+   </tbody></table>
+   <p class="muted">只對「可稽核的合格完成訂單貢獻毛利」分成，不對 GMV 分成。</p></div>
+  <div class="card"><h4>其他可賣的東西</h4>
+   <table><tbody>
+    <tr><td>付費需求規劃</td><td class="n">¥5–10k · 1–2 週</td></tr>
+    <tr><td>AI 短片試點 10 支</td><td class="n">¥3–6k</td></tr>
+    <tr><td>每月 30 支短片</td><td class="n">¥8–15k／月</td></tr>
+    <tr><td>每月 60 支短片</td><td class="n">¥15–30k／月</td></tr>
+    <tr><td>自動化內容工作流</td><td class="n">¥20–50k 一次性</td></tr>
+    <tr><td>商業平台擴展版</td><td class="n">¥120–250k＋ · 3–5 個月起</td></tr>
+   </tbody></table>
+   <p class="muted">內容價格不含廣告投放、真人拍攝與代營運。</p></div>
+ </div>
+
+ <h3>錢與資產怎麼流</h3>
+ <div class="flow">
+  <div class="node"><b>球友</b><small>訂場、約球</small></div>
+  <div class="arr">付訂場款<br>進她的商戶號</div>
+  <div class="node" style="border-color:#173D30;background:#EEF3EE"><b>客戶（她）</b><small>品牌、球場、消費者資料、交易</small></div>
+  <div class="arr back">開發費／月費／分成</div>
+  <div class="node"><b>b-labz</b><small>產品、技術、AI 內容</small></div>
+ </div>
+ <p class="muted">我們<b>不代收</b>消費者訂場款，小程序與支付商戶用她的主體。通用運動平台引擎與 AI 內容工作流，爭取由 b-labz 保留並寫進合約；客戶專屬設計依合約約定。</p>
+</section>
+
+<section id="s3">
+ <p class="eyebrow">ROLES</p>
+ <h2><span class="no">03</span>分工：誰說什麼</h2>
+ <table><thead><tr><th>階段</th><th>老王</th><th>Baron</th></tr></thead><tbody>
+  <tr><td>開場</td><td>破冰、介紹 Baron、點出她上次說過的需求</td><td>一句話定位、說明今天會看到什麼</td></tr>
+  <tr><td>探詢</td><td>主問（她信任你），問到數字就停下來讓她多講</td><td>記錄數字，必要時追問細節</td></tr>
+  <tr><td>Demo</td><td>在關鍵時刻補一句「這就是您說的⋯」</td><td>操作與講解</td></tr>
+  <tr><td>收益試算</td><td>請她說出真實月訂場量與毛利</td><td>現場改數字、解讀結果</td></tr>
+  <tr><td>合作方式</td><td>觀察她的反應，必要時緩衝價格話題</td><td>講 A → B → C 的路，只給區間</td></tr>
+  <tr><td>收尾</td><td>約下一次時間、要資料</td><td>說明需求規劃的產出</td></tr>
+ </tbody></table>
+ <h3>見客戶前，我們兩個要先講好</h3>
+ <ul class="check"><li>老王的角色：介紹人、業務夥伴，還是共同交付？</li><li>客戶歸屬：這個客戶算誰的？後續其他案子怎麼算？</li><li>老王的佣金比例與發放時點（按收款節點？按首年收入？）</li><li>售後與交付分工：誰回客戶微信、誰處理驗收與維護？</li><li>簽約主體、跨境收款與稅務：先問專業人士，不在現場承諾</li></ul>
+ <p class="muted">以上原企畫標為「待確認」，這份手冊不替我們預設答案。</p>
+</section>
+
+<section id="s4">
+ <p class="eyebrow">RUN OF SHOW · 45 MIN</p>
+ <h2><span class="no">04</span>會議流程</h2>
+ <div class="run">
+  <div><b>5<small>MIN</small></b><span>開場</span><em class="lw">老王</em><i class="bar" style="width:100%"></i></div>
+  <div><b>10<small>MIN</small></b><span>探詢</span><em class="lw">老王問</em><i class="bar" style="width:100%"></i></div>
+  <div><b>8<small>MIN</small></b><span>Demo</span><em class="bz">Baron</em><i class="bar" style="width:100%"></i></div>
+  <div><b>5<small>MIN</small></b><span>收益試算</span><em>一起</em><i class="bar" style="width:100%"></i></div>
+  <div><b>7<small>MIN</small></b><span>合作方式</span><em class="bz">Baron</em><i class="bar" style="width:100%"></i></div>
+  <div><b>5<small>MIN</small></b><span>收尾</span><em class="lw">老王</em><i class="bar" style="width:100%"></i></div>
+ </div>
+ <p class="muted">剩 5 分鐘做緩衝。她如果一開始就很想看東西，先 Demo 再探詢也可以，但收益試算前一定要拿到她的數字。</p>
+ <div class="say" lang="zh-CN"><div class="who">开场 · 老王<button class="copy">複製</button></div><q>上次您说想做高尔夫版的携程加社交，还想把新手这一块做起来。今天我请 Baron 带了一个能直接操作的演示，十分钟就能看到：一个新手从看到内容，到约上球、订好场，您后台怎么确认、怎么看到赚了多少。看完我们再按您的实际情况聊。</q><p class="why">把上次她說過的話還給她，讓她覺得被聽見；同時預告今天的流程。</p></div>
+</section>
+
+<section id="s5">
+ <p class="eyebrow">ELEVATOR PITCH</p>
+ <h2><span class="no">05</span>電梯話術</h2>
+ <div class="say" lang="zh-CN"><div class="who">30 秒版<button class="copy">複製</button></div><q>您已经有球场资源和订场生意，这是这门生意里最难复制的部分。我们做的，是帮您把找球场、约球友、订时段、记成绩串成一个小程序，再用 AI 内容持续把新手带进来。客户、交易和数据全部留在您手里，我们负责把平台做起来。</q></div>
+ <div class="say" lang="zh-CN"><div class="who">2 分鐘版<button class="copy">複製</button></div><q>现在找球场、约球友，大多还靠熟人和微信群：价格不透明，新手不知道从哪开始，三缺一凑不齐。对球友是麻烦，对您是机会，谁先把这件事做顺，谁就拥有下一批球友。
+GOLF CLUB 360 是一个小程序加一套营运后台。球友在小程序里找球场、约球友、订时段、记成绩；您的团队在后台一键确认订单，每一单的金额、毛利、从哪条内容来的都看得清楚。
+我们不建议一开始就做一个大平台。第一步先用一到两周做需求规划，用您自己的订场量和毛利算出方案和报价，再决定开不开发。第一版只做订场、组局和后台，先把交易跑起来，再加内容获客和社区功能。</q></div>
+</section>
+
+<section id="s6">
+ <p class="eyebrow">DISCOVERY</p>
+ <h2><span class="no">06</span>探詢問題：十個問題</h2>
+ <p class="lead">問完一題就停，讓她講。聽到數字立刻記下來，收益試算要用。</p>
+ <table><thead><tr><th style="width:42%">怎麼問（簡體）</th><th>為什麼問</th><th>聽什麼訊號</th></tr></thead><tbody lang="zh-CN">
+  <tr><td>现在一个月大概完成多少单订场？每单大概能赚多少？</td><td lang="zh-Hant">收益試算的核心數字</td><td lang="zh-Hant">月 300 單以上才值得談分成</td></tr>
+  <tr><td>现在客户主要怎么下单？微信群、人工，还是有系统？</td><td lang="zh-Hant">我們替代的是什麼</td><td lang="zh-Hant">人工越多，痛點越大</td></tr>
+  <tr><td>您这边有自己的技术团队，或者合作过的开发公司吗？</td><td lang="zh-Hant">潛在阻力與競爭</td><td lang="zh-Hant">有團隊 → 改賣產品設計＋內容</td></tr>
+  <tr><td>新客户现在主要从哪里来？拉一个新客大概要花多少？</td><td lang="zh-Hant">內容獲客的價值</td><td lang="zh-Hant">說不出成本 = 我們的機會</td></tr>
+  <tr><td>球场那边是固定配额、协议价，还是每次去询价？</td><td lang="zh-Hant">訂場確認流程怎麼設計</td><td lang="zh-Hant">逐筆詢價 → 先做人工確認</td></tr>
+  <tr><td>营运上最花时间、最容易出错的是哪一段？</td><td lang="zh-Hant">決定 Demo 講哪裡</td><td lang="zh-Hant">她說的痛點，Demo 時點名回應</td></tr>
+  <tr><td>华东下一步想先做哪几个城市？</td><td lang="zh-Hant">路線圖與規模</td><td lang="zh-Hant">有具體城市 = 有時間壓力</td></tr>
+  <tr><td>第一阶段您心里大概的投入是：五万以内、五到十万，还是十万以上？</td><td lang="zh-Hant">預算級別（用區間問比較好答）</td><td lang="zh-Hant">五萬以內 → 先賣需求規劃＋內容試點</td></tr>
+  <tr><td>这件事除了您，还有谁一起决定？</td><td lang="zh-Hant">找到決策人與出資人</td><td lang="zh-Hant">有別人 → 下次請他一起來</td></tr>
+  <tr><td>您希望什么时候先跑起来？有没有旺季或赛事的时间点？</td><td lang="zh-Hant">急迫性</td><td lang="zh-Hant">有日期 → 用它倒推時程</td></tr>
+ </tbody></table>
+</section>
+
+<section id="s7">
+ <p class="eyebrow">DEMO TALK TRACK · 7 MIN</p>
+ <h2><span class="no">07</span>Demo 話術：每一步說什麼</h2>
+ <p class="lead">線上 Demo：<a href="demo/" target="_blank" rel="noopener">https://bohamfu-ops.github.io/sz-001-pitch-docs/demo/</a>。開始前先按右上「重设」。每一步都把功能連回「錢」：多一單、少一次人工、多一次回訪。</p>
+ <div class="say" lang="zh-CN"><div class="who">1 · 发现新手内容<button class="copy">複製</button></div><q>很多新手不是不想打，是不知道怎么开始。我们用一条内容，把他直接带到一场新手友好的球局。</q></div>
+ <div class="say" lang="zh-CN"><div class="who">2 · 湖畔球局<button class="copy">複製</button></div><q>三缺一，最后一个位置正好给新手。费用写得很清楚，含果岭费和球车，主办会带新手。</q></div>
+ <div class="say" lang="zh-CN"><div class="who">3 · 加入球局<button class="copy">複製</button></div><q>点一下就加入，名额马上变成四个人，不用在群里一个个问。</q></div>
+ <div class="say" lang="zh-CN"><div class="who">4 · 提交订场<button class="copy">複製</button></div><q>只订他自己那个位置，价格在提交时就锁定。您看这里，系统记下了这一单是从哪条内容来的。</q></div>
+ <div class="say" lang="zh-CN"><div class="who">5 · 营运确认<button class="copy">複製</button></div><q>这是您团队看到的后台。同一笔订单，金额、毛利、来源都在这里，开球时段表上也能看到他占的是哪个位置，一键确认。</q></div>
+ <div class="say" lang="zh-CN"><div class="who">6 · 我的订单<button class="copy">複製</button></div><q>后台一确认，球友手机上马上变成已确认。不用再在微信里来回确认，也不怕漏单。</q></div>
+ <div class="say" lang="zh-CN"><div class="who">收益试算 · 请她说数字<button class="copy">複製</button></div><q>您刚才说每个月大概多少单、每单赚多少？我们直接填进去。这里看的是：多出来的订单扣掉新增成本，多久能把投入赚回来。这是假设试算，不是承诺，但用的是您自己的数字。</q><p class="why">預設是保守 10%：月淨效益 ¥5,000、16 個月回本。切到基準 30%：¥25,000、3.2 個月。讓她自己選情境，不要替她選最樂觀的。</p></div>
+ <p class="muted">講到 AI 內容時要主動說：「这是样片和分镜，正式投放前我们会先做小规模测试。」不要讓她以為已經有投放成績。</p>
+</section>
+
+<section id="s8">
+ <p class="eyebrow">OBJECTIONS</p>
+ <h2><span class="no">08</span>異議處理</h2>
+ <p class="lead">先同意她的擔心，再給一個小而具體的下一步。每題底下的紅框是我們的底線。</p>
+
+ <details class="obj" open><summary><i>01</i><span lang="zh-CN">「太贵了。」</span></summary><div class="body">
+  <div class="say" lang="zh-CN"><div class="who">回應<button class="copy">複製</button></div><q>理解，所以我们不建议一开始就投大钱。可以先做一到两周的需求规划，费用几千块，就能拿到按您自己数据算出来的方案、范围和正式报价，再决定要不要开发。规划的费用之后可以抵扣开发费。</q></div>
+  <div class="floor"><b>底線：</b>可以縮範圍、拆階段、分期付款，但不降到免費。不現場報總價，只給區間。</div></div></details>
+
+ <details class="obj"><summary><i>02</i><span lang="zh-CN">「市面上已经有订场、记分的 App 了。」</span></summary><div class="body">
+  <div class="say" lang="zh-CN"><div class="who">回應<button class="copy">複製</button></div><q>对，工具市面上有。差别在于那是别人的平台，客户和数据是别人的。我们做的是您自己的平台：球场资源、客户、交易数据全部在您手里，而且把新手获客这一段一起做了，这是别人不会帮您做的。</q></div>
+  <div class="floor"><b>底線：</b>不點名批評競品，不說「市場是空白」。</div></div></details>
+
+ <details class="obj"><summary><i>03</i><span lang="zh-CN">「我们自己有技术团队／之前找过外包。」</span></summary><div class="body">
+  <div class="say" lang="zh-CN"><div class="who">回應<button class="copy">複製</button></div><q>那很好，可以分工合作。我们可以只做最难的几块：产品设计、营运后台的逻辑、AI 内容获客，跟您的团队一起推进。</q></div>
+  <div class="floor"><b>底線：</b>改賣需求規劃＋內容服務；不要因此把開發費降到不划算。</div></div></details>
+
+ <details class="obj"><summary><i>04</i><span lang="zh-CN">「能不能先免费做，赚了钱再分成？」</span></summary><div class="body">
+  <div class="say" lang="zh-CN"><div class="who">回應<button class="copy">複製</button></div><q>我们理解您想控制风险。所以才建议先做小金额的需求规划，可以抵扣。等平台跑起来、有了真实交易数据，我们再一起谈长期按成交分享的合作，那时候对双方都公平、也算得清楚。</q></div>
+  <div class="floor"><b>底線：</b>不接無底費純分成；分成只對可稽核的合格完成訂單貢獻毛利。</div></div></details>
+
+ <details class="obj"><summary><i>05</i><span lang="zh-CN">「你们能保证带来多少客户？」</span></summary><div class="body">
+  <div class="say" lang="zh-CN"><div class="who">回應<button class="copy">複製</button></div><q>获客效果没有人能保证，我们也不会这样承诺。我们能做的是先用十支短片小规模测试，每一单都带来源标签：花了多少、来了多少人、成交多少单，用数据决定要不要加码。</q></div>
+  <div class="floor"><b>底線：</b>不承諾任何訂單數、留資數或回本時間。</div></div></details>
+
+ <details class="obj"><summary><i>06</i><span lang="zh-CN">「数据安全吗？数据归谁？」</span></summary><div class="body">
+  <div class="say" lang="zh-CN"><div class="who">回應<button class="copy">複製</button></div><q>小程序和支付用您自己的主体，球友的钱直接进您的商户号，我们不经手订场款。客户和交易数据都归您，系统部署在国内的云上。</q></div>
+  <div class="floor"><b>底線：</b>資料合規與部署細節在需求規劃時確認，不現場承諾具體認證或條款。</div></div></details>
+
+ <details class="obj"><summary><i>07</i><span lang="zh-CN">「多久能上线？」</span></summary><div class="body">
+  <div class="say" lang="zh-CN"><div class="who">回應<button class="copy">複製</button></div><q>第一版只做订场、组局和后台，专职投入的话大约六到八周。完整的平台会分阶段做，每一段都有看得到的交付，由您决定要不要继续。准确的时间在需求规划后给您。</q></div>
+  <div class="floor"><b>底線：</b>6–8 週的前提是專職人力；兼職約 8–12 週。人力還沒排定前，不說死日期。</div></div></details>
+
+ <details class="obj"><summary><i>08</i><span lang="zh-CN">「你们不在本地，后续维护怎么办？」</span></summary><div class="body">
+  <div class="say" lang="zh-CN"><div class="who">回應<button class="copy">複製</button></div><q>日常维护和问题处理都在线上，有固定的响应方式；合同和付款方式我们会按合规的方式安排，需要的话也可以约现场沟通。</q></div>
+  <div class="floor"><b>底線：</b>簽約主體、跨境收款與稅務先問專業人士；不承諾駐點或固定到場頻率。</div></div></details>
+
+ <details class="obj"><summary><i>09</i><span lang="zh-CN">「我再考虑一下。」</span></summary><div class="body">
+  <div class="say" lang="zh-CN"><div class="who">回應<button class="copy">複製</button></div><q>当然。我们把今天的演示和试算整理给您。您方便的话把每月订场量和每单毛利发给我们，我们按您的数字再算一版。下周哪天方便，我们约三十分钟？</q></div>
+  <div class="floor"><b>底線：</b>一定要約到下一次的具體時間，或拿到一份資料。兩樣都沒有，就是沒成交。</div></div></details>
+</section>
+
+<section id="s9">
+ <p class="eyebrow">RED LINES</p>
+ <h2><span class="no">09</span>紅線與用詞</h2>
+ <div class="dos">
+  <div class="card"><h4>不要說、不要做</h4><ul class="no-list">
+   <li>「保證」「一定能」「肯定回本」</li><li>現場報總價或分成比例</li><li>答應免費先做、或無底費純分成</li><li>說「我們之前的籃球平台直接拿來用」（程式權利還沒確認）</li><li>把 Demo 裡的數字說成真實營運數據</li><li>答應兼職人力下的 6–8 週</li><li>點名批評競品</li><li>說 AI 短片已經投放過、有成效</li></ul></div>
+  <div class="card"><h4>要說、要做</h4><ul class="yes-list">
+   <li>用她自己的數字算</li><li>每個功能都連回「錢」：多一單、少人工、多回訪</li><li>反覆強調「客戶和數據歸您」</li><li>「先小步驗證，再決定加碼」</li><li>可以提：我們有體育社交平台的開發經驗</li><li>需求規劃的產出講具體：方案、範圍、正式報價</li><li>會後 24 小時內傳跟進訊息</li></ul></div>
+ </div>
+</section>
+
+<section id="s10">
+ <p class="eyebrow">CLOSE &amp; FOLLOW-UP</p>
+ <h2><span class="no">10</span>收尾與跟進</h2>
+ <div class="say" lang="zh-CN"><div class="who">收尾 · 老王<button class="copy">複製</button></div><q>今天看下来，您觉得哪一块最想先做？我们建议的下一步很简单：先用一到两周做需求规划，您拿到专属方案和正式报价，再决定开不开发。我们下周约个时间，把您的数据一起过一遍？</q></div>
+ <h3>請她提供的資料</h3>
+ <ul class="check"><li>每月完成訂場量、平均交易額、每單毛利、回購率、新手占比</li><li>球場供給方式：固定配額、協議價或逐筆詢價；時段與價格怎麼更新</li><li>現有成交方式：微信人工、小程序／第三方系統、技術團隊</li><li>營運最耗時的環節、最想先做的功能（訂場／約球／記分）</li><li>華東優先城市、內容與新手球局的營運人力</li><li>第一階段預算級別、決策者與出資者、希望上線的時間點</li></ul>
+ <div class="say" lang="zh-CN"><div class="who">會後 24 小時內 · 微信跟進範本<button class="copy">複製</button></div><q>X总您好，谢谢您今天抽时间看 GOLF CLUB 360 的演示。按今天聊的，我们建议下一步先做一到两周的需求规划：用您的真实订场量和毛利，算出专属方案、上线范围和正式报价，规划费用可抵扣后续开发。
+方便的话请先发我们几项：① 每月完成订场量 ② 平均每单毛利 ③ 现在的下单方式 ④ 华东优先城市。我们收到后会尽快给您一版初步方案。</q></div>
+ <h3>會後我們兩個要做的</h3>
+ <ul class="check"><li>當天整理：她給的數字、預算級別、決策人、異議</li><li>更新收益試算：用她的數字截一張圖傳給她</li><li>決定報價區間與需求規劃的範圍</li><li>確認老王的角色與佣金（若還沒談）</li><li>約定下一次會議時間與參加的人</li></ul>
+ <p class="footer">本手冊為 b-labz 內部文件。報價、付款、分成、時程皆為內部假設，非對客戶的承諾；客戶資訊為客戶自述，尚未驗證。Demo 中的球場、球友、價格與營運數字皆為虛構。</p>
+</section>
+</main>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+<script>
+// 複製話術：優先 Clipboard API，file:// 或舊瀏覽器退回 execCommand。
+document.querySelectorAll('.say').forEach(s=>{const b=s.querySelector('.copy');if(!b)return;b.addEventListener('click',async()=>{const t=s.querySelector('q').innerText.trim();try{await navigator.clipboard.writeText(t)}catch(e){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}b.textContent='已複製';b.classList.add('ok');setTimeout(()=>{b.textContent='複製';b.classList.remove('ok')},1400)})})
+// 網址複製按鈕。
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy;try{await navigator.clipboard.writeText(t)}catch(e){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}b.textContent='已複製';b.classList.add('ok');setTimeout(()=>{b.textContent='複製';b.classList.remove('ok')},1400)}))
+// 圖表提示：帶 data-tip 的元素懸停顯示。
+const tip=document.getElementById('tip')
+document.querySelectorAll('[data-tip]').forEach(el=>{el.addEventListener('mousemove',e=>{tip.textContent=el.dataset.tip;tip.style.left=Math.min(e.clientX+14,innerWidth-280)+'px';tip.style.top=(e.clientY+14)+'px';tip.classList.add('on')});el.addEventListener('mouseleave',()=>tip.classList.remove('on'))})
+// 目錄跟隨捲動。
+const links=[...document.querySelectorAll('nav.toc a')]
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-30% 0px -60% 0px'})
+document.querySelectorAll('main section').forEach(s=>io.observe(s))
+// 列印時展開所有異議卡。
+addEventListener('beforeprint',()=>document.querySelectorAll('details').forEach(d=>d.open=true))
+</script>
+</body>
+</html>
